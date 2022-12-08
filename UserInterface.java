@@ -1,6 +1,5 @@
 package com.cognixia.jump.ems;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -10,6 +9,7 @@ public class UserInterface {
 	}
 	
 	public static void run() {
+		Company newCompany = new Company("EMJ");
 		System.out.println("Welcome to the Employee Management System");
 		String[] options = {
 				"1: Add new employee",
@@ -34,7 +34,9 @@ public class UserInterface {
 			
 			switch(option) {
 			case 1:
-				System.out.println("Option 1");
+				System.out.println("Option 1:");
+				newCompany.addEmployee(1234, "Nicholas", "LastName", 50000);
+				System.out.println("Employee added");
 				break;
 			case 2:
 				System.out.println("Option 2");
@@ -44,6 +46,7 @@ public class UserInterface {
 				break;
 			case 4:
 				System.out.println("Option 4");
+				listEmployees();
 				break;
 			case 5: // Exit
 				System.out.println("Option 5");
@@ -53,18 +56,8 @@ public class UserInterface {
 		sc.close();
 	}
 	
-	public void addEmployee() {
-		
-	}
-	
-	// public void updateEmployee() {}
-	
-	public void removeEmployee() {
-		
-	}
-	
-	public void listEmployees() {
-		
+	public static void listEmployees() {
+		System.out.println("List of employees");
 	}
 
 }

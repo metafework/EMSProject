@@ -11,14 +11,13 @@ public class Employee{
 		float salary;
 		String department;
 		
-		public Employee(int id, String firstName, float salary, String lastName, LocalDate DOE, String department)
+		public Employee(int id, String firstName, String lastName, float salary, LocalDate DOE)
 		{
 			this.id = id;
 			this.firstName = firstName;
 			this.lastName = lastName;
 			this.DOE = DOE;
 			this.salary = salary;
-			this.department = department;
 		}
 		
 		public String toString()
