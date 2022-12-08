@@ -1,5 +1,6 @@
 package com.cognixia.jump.ems;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -46,7 +47,7 @@ public class UserInterface {
 				break;
 			case 4:
 				System.out.println("Option 4");
-				listEmployees();
+				listEmployees(newCompany);
 				break;
 			case 5: // Exit
 				System.out.println("Option 5");
@@ -56,8 +57,12 @@ public class UserInterface {
 		sc.close();
 	}
 	
-	public static void listEmployees() {
-		System.out.println("List of employees");
+	public static void listEmployees(Company company) {
+		System.out.println("List of employees:");
+		List<Employee> employees = company.getEmployees();
+		employees.stream()
+			.forEach(employee -> System.out.println(employee.toString()));
+		System.out.println();
 	}
 
 }

@@ -22,8 +22,9 @@ public class Employee{
 		
 		public String toString()
 		{
-			return "\nEmployee Details :" + "\nID: " + this.id + "\nFirst Name: " + this.firstName +"\nLast Name: "+ this.lastName + "\nDate of Employment: " + this.DOE +"\nSalary: " + 
-					this.salary + "\nDepartment " + this.department;
+			return "\nEmployee " + "ID: " + this.id + ", First Name: " + this.firstName +
+					", Last Name: " + this.lastName + ", Date of Employment: " + this.DOE +
+					", Salary: " + this.salary + ", Department: " + this.department;
 		}
 
 		/**
