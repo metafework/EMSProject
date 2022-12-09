@@ -28,6 +28,7 @@ public class UserInterface {
 		
 		Scanner sc = new Scanner(System.in);
 		boolean running = true;
+
 		while(running) {
 			System.out.println("Select an option:");
 			System.out.println(String.join("\n", options));
@@ -46,10 +47,9 @@ public class UserInterface {
 				//sc.next();
 				continue;
 			}
-			//int option=promptUserOption();
-			//break;
+			//Chosen options
 			switch(option) {
-			case 1:
+			case 1: // enter new employee
 				System.out.println("Option 1:");
 				try {
 					System.out.println("Enter new Employee's First name.");
@@ -66,7 +66,7 @@ public class UserInterface {
 				
 				System.out.println("Employee added.");
 				break;
-			case 2:
+			case 2: //updates employees
 				System.out.println("Option 2");
 				try {
 					System.out.println("Enter Employee Id: ");
@@ -80,7 +80,7 @@ public class UserInterface {
 					sc.next();
 				} 
 				break;
-			case 3:
+			case 3: // removes employees
 				System.out.println("Option 3");
 				System.out.print("Enter Employee Id: ");
 
@@ -104,22 +104,6 @@ public class UserInterface {
 		sc.close();
 	}
 	
-	//// Method for prompting for Employee info upon addition ////
-//	public static void promptEmployeeInfo() {
-//		Scanner sc=new Scanner(System.in);
-//		try {
-//			System.out.println("Enter Employee's First name.");
-//			String firstName=sc.nextLine();
-//			System.out.println("Enter Employee's Last name.");
-//			String lastName=sc.nextLine();
-//			System.out.println("Enter Employee's Salary.");
-//			float salary=sc.nextFloat();
-//		}catch(Exception e){
-//			e.printStackTrace();
-//		}
-//		
-//	}
-
 	//// Method for listing all current employees ////
 	//// Satisfies stream use requirement /////
 	public static void listEmployees(Company company) {
