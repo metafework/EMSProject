@@ -1,15 +1,15 @@
-package com.cognixia.jump.ems;
+//package com.cognixia.jump.ems;
 
 import java.time.LocalDate;
 
 public class Employee{
 
-		int id;
-		String firstName;
-		String lastName;
-		LocalDate DOE; 
-		float salary;
-		String department;
+		private int id;
+		private String firstName;
+		private String lastName;
+		private LocalDate DOE; 
+		private float salary;
+		private String department;
 		
 		public Employee(int id, String firstName, String lastName, float salary, LocalDate DOE)
 		{
@@ -80,7 +80,7 @@ public class Employee{
 		 * @param dOE the dOE to set
 		 */
 		public void setDOE(LocalDate dOE) {
-			DOE = dOE;
+			this.DOE = dOE;
 		}
 
 		/**

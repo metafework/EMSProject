@@ -1,4 +1,4 @@
-package com.cognixia.jump.ems;
+//package com.cognixia.jump.ems;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.List;
 public class Company {
 	// Add departments later
 	private String name;
-	private List<Employee> employees = null;
+	List<Employee> employees = null;
 	
 	Company(String name) {
 		this.name = name;
@@ -22,7 +22,6 @@ public class Company {
 	// public void updateEmployee() {}
 	
 	public void removeEmployee() {
-		
 	}
 	
 	/**
