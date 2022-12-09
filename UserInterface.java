@@ -80,6 +80,7 @@ public class UserInterface {
 					sc.next();
 				} 
 				break;
+			case 3:
 				System.out.println("Option 3");
 				System.out.print("Enter Employee Id: ");
 
