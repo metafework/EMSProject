@@ -2,6 +2,7 @@
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class UserInterface {
 	
@@ -30,15 +31,23 @@ public class UserInterface {
 		while(running) {
 			System.out.println("Select an option:");
 			System.out.println(String.join("\n", options));
-			
-			int option;
+			int option=0;
+			String strOption;
+			;
 			try {
 				option = sc.nextInt();
+				strOption=Integer.toString(option);
+				final Pattern pattern = Pattern.compile("^[1-5]$");
+			    if (!pattern.matcher(strOption).matches()) {
+			        throw new IllegalArgumentException("Invalid String");
+			    }
 			} catch (Exception e) {
-				e.printStackTrace();
-				break;
+				System.out.println("Invalid Option.");
+				//sc.next();
+				continue;
 			}
-			
+			//int option=promptUserOption();
+			//break;
 			switch(option) {
 			case 1:
 				System.out.println("Option 1:");
@@ -84,7 +93,7 @@ public class UserInterface {
 	}
 	
 	//// Method for prompting for Employee info upon addition ////
-	public static void promptEmployeeInfo() {
+	/*public static void promptEmployeeInfo() {
 		Scanner sc=new Scanner(System.in);
 		try {
 			System.out.println("Enter Employee's First name.");
@@ -93,12 +102,31 @@ public class UserInterface {
 			String lastName=sc.nextLine();
 			System.out.println("Enter Employee's Salary.");
 			float salary=sc.nextFloat();
+			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 		
-	}
-	//// Method for listing all current employees ////
+	}*/
+	
+	/*public static int promptUserOption(){
+		Scanner sc=new Scanner(System.in);
+		int option;
+		String strOption;
+		try {
+			option = sc.nextInt();
+			strOption=Integer.toString(option);
+			final Pattern pattern = Pattern.compile("^[1-5]$");
+		    if (!pattern.matcher(strOption).matches()) {
+		        throw new IllegalArgumentException("Invalid String");
+		    }
+		} catch (Exception e) {
+			System.out.println("Invalid Option.");;
+			
+		}
+		return option;
+		sc.close();
+	}*/	//// Method for listing all current employees ////
 	//// Satisfies stream use requirement /////
 	public static void listEmployees(Company company) {
 		System.out.println("List of employees:");
