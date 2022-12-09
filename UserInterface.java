@@ -80,9 +80,16 @@ public class UserInterface {
 					sc.next();
 				} 
 				break;
-			case 3:
 				System.out.println("Option 3");
-				newCompany.removeEmployee(1000);
+				System.out.print("Enter Employee Id: ");
+
+				try {
+					int id = sc.nextInt();
+					newCompany.removeEmployee(id);
+					System.out.println("Employee removed");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 				break;
 			case 4: // Lists all current employees
 				System.out.println("Option 4");
@@ -97,44 +104,28 @@ public class UserInterface {
 	}
 	
 	//// Method for prompting for Employee info upon addition ////
-	/*public static void promptEmployeeInfo() {
-		Scanner sc=new Scanner(System.in);
-		try {
-			System.out.println("Enter Employee's First name.");
-			String firstName=sc.nextLine();
-			System.out.println("Enter Employee's Last name.");
-			String lastName=sc.nextLine();
-			System.out.println("Enter Employee's Salary.");
-			float salary=sc.nextFloat();
-			
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		
-	}*/
-	
-	/*public static int promptUserOption(){
-		Scanner sc=new Scanner(System.in);
-		int option;
-		String strOption;
-		try {
-			option = sc.nextInt();
-			strOption=Integer.toString(option);
-			final Pattern pattern = Pattern.compile("^[1-5]$");
-		    if (!pattern.matcher(strOption).matches()) {
-		        throw new IllegalArgumentException("Invalid String");
-		    }
-		} catch (Exception e) {
-			System.out.println("Invalid Option.");;
-			
-		}
-		return option;
-		sc.close();
-	}*/	//// Method for listing all current employees ////
+//	public static void promptEmployeeInfo() {
+//		Scanner sc=new Scanner(System.in);
+//		try {
+//			System.out.println("Enter Employee's First name.");
+//			String firstName=sc.nextLine();
+//			System.out.println("Enter Employee's Last name.");
+//			String lastName=sc.nextLine();
+//			System.out.println("Enter Employee's Salary.");
+//			float salary=sc.nextFloat();
+//		}catch(Exception e){
+//			e.printStackTrace();
+//		}
+//		
+//	}
+
+	//// Method for listing all current employees ////
 	//// Satisfies stream use requirement /////
 	public static void listEmployees(Company company) {
-		System.out.println("List of employees:");
 		List<Employee> employees = company.getEmployees();
+		System.out.println("--- List of employees ---");
+		System.out.println("Count: " + employees.size() + "\n");
+
 		employees.stream()
 			.forEach(employee -> System.out.println(employee.toString()));
 		System.out.println();
