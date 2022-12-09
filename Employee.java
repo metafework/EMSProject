@@ -1,4 +1,4 @@
-//package com.cognixia.jump.ems;
+package com.cognixia.jump.ems;
 
 import java.time.LocalDate;
 
@@ -22,9 +22,9 @@ public class Employee{
 		
 		public String toString()
 		{
-			return "\nEmployee " + "ID: " + this.id + ", First Name: " + this.firstName +
+			return "Employee " + "ID: " + this.id + ", First Name: " + this.firstName +
 					", Last Name: " + this.lastName + ", Date of Employment: " + this.DOE +
-					", Salary: " + this.salary + ", Department: " + this.department;
+					", Salary: $" + this.salary + ", Department: " + this.department;
 		}
 
 		/**

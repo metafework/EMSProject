@@ -1,4 +1,4 @@
-//package com.cognixia.jump.ems;
+package com.cognixia.jump.ems;
 
 import java.util.List;
 import java.util.Scanner;
@@ -97,7 +97,7 @@ public class UserInterface {
 				listEmployees(newCompany);
 				break;
 			case 5: // Exit
-				System.out.println("Option 5");
+				System.out.println("Goodbye!");
 				running = false;
 			}
 		}
