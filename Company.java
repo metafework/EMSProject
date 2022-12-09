@@ -1,4 +1,4 @@
-package com.cognixia.jump.ems;
+//package com.cognixia.jump.ems;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -19,7 +19,20 @@ public class Company {
 		employees.add(newEmployee);
 	}
 	
-	// public void updateEmployee() {}
+	public void updateEmployeeSalary(int id, float salary) {
+		for(Employee employee : employees) {
+			if(employee.getId() == id) {
+				employee.setSalary(salary);
+			}
+		}
+	}
+	public void updateEmployeeDepartment(int id, String department) {
+		for(Employee employee : employees) {
+			if(employee.getId() == id) {
+				employee.setDepartment(department);
+			}
+		}
+	}
 	
 	public void removeEmployee(int id) {
 		employees.removeIf(employee -> employee.getId() == id);

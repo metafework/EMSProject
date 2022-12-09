@@ -1,4 +1,4 @@
-package com.cognixia.jump.ems;
+//package com.cognixia.jump.ems;
 
 import java.util.List;
 import java.util.Scanner;
@@ -59,6 +59,13 @@ public class UserInterface {
 				break;
 			case 2:
 				System.out.println("Option 2");
+				System.out.println("Enter Employee Id: ");
+				int id = sc.nextInt();
+				System.out.println("Employees new salary:");
+				float salary=sc.nextFloat();
+				newCompany.updateEmployeeSalary(id, salary);
+				
+				System.out.println("Employee was updated.");
 				break;
 			case 3:
 				System.out.println("Option 3");
