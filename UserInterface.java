@@ -68,13 +68,17 @@ public class UserInterface {
 				break;
 			case 2:
 				System.out.println("Option 2");
-				System.out.println("Enter Employee Id: ");
-				int id = sc.nextInt();
-				System.out.println("Employees new salary:");
-				float salary=sc.nextFloat();
-				newCompany.updateEmployeeSalary(id, salary);
-				
-				System.out.println("Employee was updated.");
+				try {
+					System.out.println("Enter Employee Id: ");
+					int id = sc.nextInt();
+					System.out.println("Employees new salary:");
+					float salary=sc.nextFloat();
+					newCompany.updateEmployeeSalary(id, salary);
+					System.out.println("Employee was updated.");
+				} catch(Exception e){
+					System.out.println("Invalid id!");
+					sc.next();
+				} 
 				break;
 			case 3:
 				System.out.println("Option 3");
