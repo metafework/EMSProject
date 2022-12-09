@@ -39,10 +39,10 @@ public class UserInterface {
 				strOption=Integer.toString(option);
 				final Pattern pattern = Pattern.compile("^[1-5]$");
 			    if (!pattern.matcher(strOption).matches()) {
-			        throw new IllegalArgumentException("Invalid String");
+			        throw new InvalidInputException("Invalid String");
 			    }
 			} catch (Exception e) {
-				System.out.println("Invalid Option.");
+				System.out.println(e);
 				//sc.next();
 				continue;
 			}
