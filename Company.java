@@ -1,4 +1,4 @@
-//package com.cognixia.jump.ems;
+package com.cognixia.jump.ems;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -21,7 +21,8 @@ public class Company {
 	
 	// public void updateEmployee() {}
 	
-	public void removeEmployee() {
+	public void removeEmployee(int id) {
+		employees.removeIf(employee -> employee.getId() == id);
 	}
 	
 	/**

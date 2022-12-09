@@ -1,4 +1,4 @@
-//package com.cognixia.jump.ems;
+package com.cognixia.jump.ems;
 
 import java.util.List;
 import java.util.Scanner;
@@ -20,7 +20,7 @@ public class UserInterface {
 		String[] options = {
 				"1: Add new employee",
 				"2: Update employee information",
-				"3: ...",
+				"3: Remove employee by id",
 				"4: List All Employees",
 				"5: Exit program"
 		};
@@ -55,7 +55,6 @@ public class UserInterface {
 					e.printStackTrace();
 				}
 				
-				//newCompany.addEmployee(1234, "Nicholas", "LastName", 50000);
 				System.out.println("Employee added.");
 				break;
 			case 2:
@@ -63,6 +62,7 @@ public class UserInterface {
 				break;
 			case 3:
 				System.out.println("Option 3");
+				newCompany.removeEmployee(1000);
 				break;
 			case 4: // Lists all current employees
 				System.out.println("Option 4");
@@ -91,7 +91,7 @@ public class UserInterface {
 		}
 		
 	}
-	//// Method for listing all current employees////
+	//// Method for listing all current employees ////
 	//// Satisfies stream use requirement /////
 	public static void listEmployees(Company company) {
 		System.out.println("List of employees:");
